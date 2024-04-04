@@ -1,0 +1,90 @@
+#login-box {
+    width: 100%;
+    max-width: 600px;
+    margin: 100px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    padding: 40px;
+
+  }
+  
+  .container {
+    padding: 40px;
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    margin-top: 10;
+    font-size: 24px;
+    color: #333333;
+    text-align: center;
+    margin-bottom: 30px;
+    
+  }
+  
+  .loginwith {
+    
+    font-size: 20px;
+    color: #555555;
+    margin-bottom: 20px;
+    
+  }
+
+  .signin-title,
+  .signin-social,
+  .loginwith {
+    text-align: center;
+    font-size: 20px;
+    color: #555555;
+    margin-bottom: 20px;
+    
+  }
+  
+  input[type="text"]:focus,
+  input[type="password"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    
+  }
+  
+  input[type="submit"],
+  button {
+    background-color: #164b58;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover,
+  button:hover {
+
+    background-color: #4a8ac9;
+  }
+  
+
+  .social-signin {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .social-signin:hover {
+    background-color: #6fa3e0;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .container {
+      padding: 20px;
+    }
+  }
+  
+
+
+  

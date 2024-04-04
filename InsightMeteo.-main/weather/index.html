@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InsightMeteo.</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="https://kit.fontawesome.com/ad31800fcc.js" crossorigin="anonymous"></script> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="scripts/app.js" defer></script>
+    <script src="scripts/rain.js" defer></script>
+  </head>
+  <body>
+    <section class="layers">
+      <div class="layers__container">
+        <div
+          class="layers__item layer-1"
+          style="background-image: url(img/layer-1.jpg)"
+        ></div>
+        <div
+          class="layers__item layer-2"
+          style="background-image: url(img/layer-2.png)"
+        ></div>
+        <div class="layers__item layer-3">
+          <div class="hero-content">
+            <h1>InsightMeteo:</h1>
+            <div class="hero-content-p">
+              Forecasting Clarity, Weather Wisdom
+            </div>
+            <a href="#services" type="button" class="button-start">View more</a>
+            <button class="translate" onclick="translatePage()">EN</button>
+          </div>
+        </div>
+        <div class="layers__item layer-4">
+          <canvas class="rain"></canvas>
+        </div>
+        <div
+          class="layers__item layer-5"
+          style="background-image: url(img/layer-5.png)"
+        ></div>
+        <div
+          class="layers__item layer-6"
+          style="background-image: url(img/layer-6.png)"
+        ></div>
+      </div>
+    </section>
+    <section id="services">
+      <div class="services container">
+        <div class="service-top">
+          <h1 class="section-title">Services</h1>
+          <p class="advantage">Explore the benefits of our weather forecasting project</p>
+        </div>
+        <div class="service-bottom">
+          <div class="service-item">
+            <div class="icon">
+              <i class="fa fa-eye fa-3x" aria-hidden="true"></i>
+            </div>
+            <h2>Accurate Forecasts</h2>
+            <p>Our forecasts are generated using advanced algorithms and data analysis techniques. Expect precise and reliable weather predictions tailored to your needs.</p>
+          </div>
+          <div class="service-item">
+            <div class="icon">
+              <i class="fa fa-globe fa-3x"></i>
+            </div>
+            <h2>Global Coverage</h2>
+            <p>Our weather forecasts provide coverage for locations worldwide, ensuring you stay informed about weather conditions wherever you are.</p>
+          </div>
+          <div class="service-item">
+            <div class="icon">
+              <i class="fa fa-user-circle-o fa-3x" aria-hidden="true"></i>
+            </div>
+            <h2>Real-time Updates</h2>
+            <p>Stay up-to-date with real-time weather updates, including wind speed, direction, and other relevant information.</p>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials">
+      <div class="testimonials container">
+        <h1 class="section-title">Testimonials</h1>
+        <div class="testimonial">
+          <div class="testimonial-content">
+            <p>"I've been using InsightMetio for my daily weather forecasts, and I'm impressed by its accuracy and user-friendly interface. Highly recommended!"</p>
+            <span class="author">- John Doe</span>
+          </div>
+          <div class="testimonial-profile">
+            <img src="img/3001758.png" alt="Profile Picture" class="profile-picture">
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="testimonial-content">
+            <p>"InsightMetio has become my go-to weather app. It provides detailed forecasts and updates, helping me plan my outdoor activities effectively."</p>
+            <span class="author">- Jane Smith</span>
+          </div>
+          <div class="testimonial-profile">
+            <img src="img/a65832155622ac173337874f02b218fb.png" alt="Profile Picture" class="profile-picture">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section id="demo">
+      <div id="weather-search">
+          <h2 class="section-title">Check the weather now</h2>
+          <div class="search-container">
+              <input type="text" id="city" placeholder="Enter city">
+              <button onclick="getWeather()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+          </div>
+          <div id="weather-info">
+          </div>
+      </div>
+  </section>
+    
+    <section id="signup">
+      <div class="signup container">
+        <h2 class="section-title">Unlock the Full Potential of InsightMeteo</h2>
+        <p class="signup-description">Stay ahead of the weather with accurate forecasts. Sign up now to access exclusive features and personalized updates!</p>
+        <a href="signin.html" class="button-signup">Sign In</a>
+      </div>
+    </section>
+    
+    <footer>
+      <div class="footer-bottom">
+        &copy; 2024 InsightMetio | Designed by Danail Danailov & Radostin Penchev
+      </div>
+    </footer>
+  </body>
+</html>

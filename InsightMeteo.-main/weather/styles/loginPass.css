@@ -1,0 +1,145 @@
+#login-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.login {
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+
+.login h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.login input[type="text"],
+.login input[type="password"],
+.login button {
+  width: calc(100% - 20px); 
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid rgba(255, 255, 255, .2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: grey;
+  outline: none;
+}
+
+.login input[type="text"]::placeholder,
+.login input[type="password"]::placeholder {
+  color: grey;
+}
+
+.password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.toggle-password,
+.toggle-confirm-password {
+  margin-left: -30px; 
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.toggle-password:hover,
+.toggle-confirm-password:hover {
+  color: #007bff;
+}
+
+.login a {
+  display: block;
+  text-decoration: none;
+  margin-top: 10px;
+  color: #000;
+}
+
+.login a:hover {
+  color: #000;
+}
+
+#signUp,
+#login,
+#logout {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#login-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.login {
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  position: relative; 
+}
+
+.button-signup {
+  display: inline-block;
+  padding: 8px 20px;
+  font-size: 16px;
+  text-transform: uppercase;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  top: -5px; 
+  right: -5px; 
+  background-color: transparent; 
+  color: white; 
+  border: none; 
+  cursor: pointer; 
+  z-index: 1; 
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .login h1 {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .login {
+    width: 100%;
+    border-radius: 0;
+  }
+}
+
+#forgot-password {
+  font-size: small; 
+  text-decoration: underline; 
+  cursor: pointer; 
+  text-align: left; 
+  display: block; 
+  margin: 0 auto 0 10px; 
+}
+
+#forgot-password:hover {
+  color: #007bff; 
+}

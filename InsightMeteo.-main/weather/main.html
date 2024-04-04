@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsightMeteo</title>
+     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet" />
+     <link rel="stylesheet" href="styles/index.css" />
+</head>
+<body>
+<!--navbar-->
+<nav>
+    <div class="logo">
+        <a href="main.html" class="logo-link"><h2>InsightMeteo.</h2></a>
+    </div>
+    <ul>
+        <li><a href="main.html" id="home-link">Home</a></li>
+        <li><a href="about.html" id="about-link">Contact</a></li>
+        <li><button id="sign-out-button">Sign out</button></li>
+    </ul>
+    <img src="img/moon.png" id="icon">
+    <button class="translate" onclick="translatePage()">EN</button>
+    <div class="menu-bars">
+        <input type="checkbox">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</nav>
+<!--content-->
+<div id="search-container">
+    <input type="text" id="city" placeholder="Enter city">
+    <button onclick="getLocation()" data-text="location">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="12">
+            <path fill="#000000" d="M12 2c4.42 0 8 3.58 8 8s-3.58 8-8 8-8-3.58-8-8 3.58-8 8-8zm0-2C6.48 0 2 4.48 2 10c0 2.56 1.08 4.98 2.94 6.72L12 24l7.06-7.28C20.92 14.98 22 12.56 22 10c0-5.52-4.48-10-10-10zm0 14.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            <path d="M0 0h24v24H0z" fill="none"/>
+        </svg>
+
+    </button>
+    <button id="voice-button" data-text="voice recognition">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 12" width="24" height="12" fill="none" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 10.5h6a2 2 0 0 0 2-2V2.5a2 2 0 0 0-2-2h-6a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2z"></path>
+            <path d="M10 6.5H14"></path>
+        </svg>    
+    </button>
+</div>
+
+<div id="weather-container" class="hidden">
+    <img id="weather-icon" alt="Weather Icon">
+    <div id="temp-div"></div>
+    <div id="weather-info"></div>
+    <div id="hourly-forecast"></div>
+</div>
+
+
+
+<div id="five-day-forecast" class="forecast-container hidden">
+    <h2 id="heading"></h2>
+    <!-- items will be dynamically added here -->
+</div>
+
+<div id="forecast-navigation" class="hidden">
+    <button id="prev-day-btn" class="button-nav1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="fill: white; width: 18px; height: 18px;">
+            <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
+        </svg>
+    </button>
+    <button id="next-day-btn" class="button-nav2">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="fill: white; width: 18px; height: 18px;">
+            <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/>
+        </svg>
+    </button>
+</div>
+
+<div id="hourly-forecast-modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div id="hourly-forecast-container"></div>
+  </div>
+</div>
+
+<h1 class="moto">See the forecast for any city in world by using the search bar.</h1>
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024 InsightMeteo. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="scripts/navbar.js"></script>
+<script src="scripts/getweather.js"></script>
+<script src="scripts/voicerecognition.js"></script>
+<script src="scripts/location.js"></script>
+<script src="scripts/translate.js"></script>
+<script  type="module" src="scripts/theme.js"></script>
+<script type="module" src="scripts/mainDatabase.js"></script>
+</body>
+</html>

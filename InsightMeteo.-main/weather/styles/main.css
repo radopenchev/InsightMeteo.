@@ -1,0 +1,342 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+:root {
+	--index: calc(1vw + 1vh);
+	--transition: 1.5s cubic-bezier(.05, .5, 0, 1);
+}
+@font-face {
+	font-family: kamerik-3d;
+	src: url(../fonts/kamerik205-heavy.woff2);
+	font-weight: 900;
+}
+@font-face {
+	font-family: merriweather-italic-3d;
+	src: url(../fonts/merriweather-regular-italic.woff2);
+}
+body {
+	background-color: #000;
+	color: #fff;
+	font-family: kamerik-3d;
+}
+.logo {
+	--logo-size: calc(var(--index) * 7.8);
+	width: var(--logo-size);
+	height: var(--logo-size);
+	background-repeat: no-repeat;
+	position: absolute;
+	left: calc(51% - calc(var(--logo-size) / 2));
+	top: calc(var(--index) * 2.8);
+	z-index: 1;
+}
+.layers {
+	perspective: 1000px;
+	overflow: hidden;
+}
+.layers__container {
+	height: 100vh;
+	min-height: 500px;
+	transform-style: preserve-3d;
+	transform: rotateX(var(--move-y)) rotateY(var(--move-x));
+	will-change: transform;
+	transition: transform var(--transition);
+}
+.layers__item {
+	position: absolute;
+	inset: -5vw; 
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.layer-1 {
+	transform: translateZ(-55px) scale(1.06);
+}
+.layer-2 {
+	transform: translateZ(80px) scale(.88);
+}
+.layer-3 {
+	transform: translateZ(180px) scale(.8);
+}
+.layer-4 {
+	transform: translateZ(190px) scale(.9);
+}
+.layer-5 {
+	transform: translateZ(300px) scale(.9);
+}
+.layer-6 {
+	transform: translateZ(380px);
+}
+.hero-content {
+	font-size: calc(var(--index) * 2.9);
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: calc(var(--index) * -.15);
+	line-height: 1.35em;
+	margin-top: calc(var(--index) * 5.5);
+}
+.hero-content span {
+	display: block;
+}
+.hero-content__p {
+	text-transform: none;
+	font-family: merriweather-italic-3d;
+	letter-spacing: normal;
+	font-size: calc(var(--index) * .73);
+	line-height: 3;
+}
+.button-start {
+	font-family: Arial;
+	font-weight: 600;
+	text-transform: uppercase;
+	font-size: calc(var(--index) * .71);
+	letter-spacing: -.02vw;
+	padding: calc(var(--index) * .7) calc(var(--index) * 1.25);
+	background-color: transparent;
+	color: #fff;
+	border-radius: 10em;
+	border: rgb(255 255 255 / .4) 3px solid;
+	outline: none;
+	cursor: pointer;
+	margin-top: calc(var(--index) * 2.5);
+}
+
+.translate {
+	font-family: Arial;
+	font-weight: bold; 
+	font-weight: 600;
+	text-transform: uppercase;
+	font-size: calc(var(--index) * .71);
+	letter-spacing: -.02vw;
+	padding: calc(var(--index) * .7) calc(var(--index) * 1.25);
+	background-color: transparent;
+	color: #fff;
+	border-radius: 10em;
+	border: rgb(255 255 255 / .4) 3px solid;
+	outline: none;
+	cursor: pointer;
+	margin-top: calc(var(--index) * 2.5);
+	text-decoration: underline; 
+
+}
+.layer-4, .layer-5, .layer-6 {
+	pointer-events: none;
+}
+
+#services {
+	background-color: #222;
+	padding: 80px 0;
+  }
+  
+  .section-title {
+	color: #fff;
+	text-align: center;
+	margin-bottom: 30px;
+  }
+  
+  .advantage {
+	color: #fff;
+	text-align: center;
+	font-size: 18px;
+	margin-bottom: 50px;
+  }
+  
+  .service-bottom {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+  }
+  
+  .service-item {
+	flex: 1 1 300px;
+	margin: 20px;
+	padding: 20px;
+	background-color: #333;
+	border-radius: 10px;
+	text-align: center;
+  }
+  
+  .service-item .icon {
+	margin-bottom: 20px;
+  }
+  
+  .service-item h2 {
+	color: #fff;
+	font-size: 24px;
+	margin-bottom: 10px;
+  }
+  
+  .service-item p {
+	color: #ccc;
+	font-size: 16px;
+  }
+
+  #testimonials {
+	background-color: #111;
+	padding: 80px 0;
+  }
+  
+  .testimonials.container {
+	max-width: 900px;
+	margin: 0 auto;
+  }
+  
+  .testimonial {
+	background-color: #222;
+	border-radius: 10px;
+	margin-bottom: 30px;
+	padding: 20px;
+  }
+  
+  .testimonial-content {
+	font-size: 18px;
+	line-height: 1.6;
+	margin-bottom: 15px;
+  }
+  
+  .testimonial-content .quote-icon {
+	color: #fff;
+	font-size: 24px;
+	margin-right: 10px;
+  }
+  
+  .testimonial-content p {
+	color: #ccc;
+  }
+  
+  .author {
+	display: block;
+	font-style: italic;
+	color: #bbb;
+  }
+  
+.testimonial {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 30px;
+  }
+  
+  .testimonial-content {
+	flex: 1;
+  }
+  
+  .profile-icon {
+	color: #fff;
+	font-size: 48px; 
+  }
+.profile-picture {
+	width: 60px; 
+	height: 60px; 
+	border-radius: 50%;
+  }
+  
+  #signup {
+	background-color: #333;
+	padding: 80px 0;
+  }
+  
+  .signup.container {
+	max-width: 900px;
+	margin: 0 auto;
+	text-align: center;
+  }
+  
+  .signup-description {
+	color: #fff;
+	font-size: 18px;
+	margin-bottom: 30px;
+  }
+  
+  .button-signup {
+	display: inline-block;
+	padding: 12px 30px;
+	background-color: #fff;
+	color: #111;
+	font-size: 18px;
+	text-transform: uppercase;
+	border-radius: 5px;
+	text-decoration: none;
+	transition: background-color 0.3s ease;
+  }
+  
+  .button-signup:hover {
+	background-color: #ddd;
+  }
+  
+footer {
+	background-color: #222;
+	color: #fff;
+	padding: 20px 0;
+	text-align: center;
+	font-size: 16px;
+  }
+  
+  .footer-bottom {
+	font-size: 16px;
+  }
+  
+@media screen and (max-width: 768px) {
+	.service-item {
+	  flex: 1 1 100%;
+	}
+  }
+  
+  @media screen and (max-width: 480px) {
+	.footer-bottom {
+	  font-size: 14px;
+	}
+  }
+  
+
+
+  #demo {
+	background-color: #222; 
+	padding: 80px 0;
+  }
+  
+  #demo h2 {
+	color: #fff;
+	text-align: center;
+	margin-bottom: 50px; 
+  }
+  
+  #weather-search {
+	max-width: 600px;
+	margin: 0 auto;
+	text-align: center;
+  }
+  
+  .search-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 30px; 
+  }
+  
+  .search-container input[type="text"] {
+	width: 60%; 
+	padding: 10px; 
+	font-size: 1rem;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	margin-right: 10px; 
+  }
+  
+  .search-container button {
+	padding: 10px 20px; 
+	background-color: #007bff;
+	color: #fff;
+	font-size: 1rem;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+  }
+  
+  .search-container button:hover {
+	background-color: #0056b3;
+  }
+  

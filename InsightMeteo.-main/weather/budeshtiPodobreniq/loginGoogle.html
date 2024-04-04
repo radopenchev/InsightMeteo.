@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/login.css" />
+
+    <title>InsightMeteo</title>
+</head>
+<body>
+  
+    <!-- Nav bar-->
+  <!--<nav>
+    <div class="logo">
+        <a href="index.html" class="logo-link"><h2>InsightMeteo.</h2></a>
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="login.html">Login/Register</a></li>
+    </ul>
+    </ul>
+    <div class="menu-bars">
+      <input type="checkbox">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav> -->
+<!-- content-->
+<div id="login-box">
+  <div class="left">
+    <h1>Sign in with social network</h1>
+
+    <!--<input type="text" id="email" name="email" placeholder="E-mail" /> 
+    <input type="password" id="password" name="password" placeholder="Password" /> 
+
+    <input type="submit" id="saveData" name="signup_sumbit" value="Sign in" /> -->
+  </div>
+  <div class="right">
+    <span class="loginwith"></span>
+
+    <button class="social-signin facebook">Log in with Facebook</button>
+    <button class="social-signin twitter">Log in with Twitter</button>
+    <button class="social-signin google" id="login">Log in with Google</button>
+  </div>
+</div>
+
+
+
+<!--footer-->
+<!--</footer>
+    <div class="footer-content">
+      <p>&copy; 2024 InsightMeteo. All rights reserved.</p>
+    </div>
+  </footer> -->
+
+
+</body>
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+  import { getAuth ,GoogleAuthProvider, signInWithRedirect, getRedirectResult, signInWithPopup } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+ // Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyC1Qnqjetogw6QtyUOhl0l_18Vl1X2eiAo",
+  authDomain: "weather-36ae6.firebaseapp.com",
+  databaseURL: "https://weather-36ae6-default-rtdb.firebaseio.com",
+  projectId: "weather-36ae6",
+  storageBucket: "weather-36ae6.appspot.com",
+  messagingSenderId: "522097498531",
+  appId: "1:522097498531:web:b29655894ba5739135e216"
+};
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const provider = new GoogleAuthProvider(app);
+
+  login.addEventListener('click', (e) => {
+   // signInWithRedirect(auth, provider);
+
+   
+    signInWithPopup(auth, provider)
+  .then((result) => {
+    // This gives you a Google Access Token. You can use it to access the Google API.
+    const credential = GoogleAuthProvider.credentialFromResult(result);
+    const token = credential.accessToken;
+    // The signed-in user info.
+    const user = result.user;
+
+    alert(user.displayName);
+    // IdP data available using getAdditionalUserInfo(result)
+    // ...
+  }).catch((error) => {
+    // Handle Errors here.
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // The email of the user's account used.
+    const email = error.customData.email;
+    // The AuthCredential type that was used.
+    const credential = GoogleAuthProvider.credentialFromError(error);
+    // ...
+
+    alert(errorMessage);
+  });
+  });
+  
+</script>
+  <script src="scripts/navbar.js"></script>
+</html>
